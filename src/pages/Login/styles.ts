@@ -1,6 +1,10 @@
 import styled from 'styled-components';
+import { ButtonContainer } from '../../components/Button/styles';
+import { IButtonProps } from '../../components/Button/types';
 
-
+type StyledButtonProps = {
+    isValid: boolean;
+   } & IButtonProps;
 
 export const Container = styled.div`
     width: 100%; 
@@ -49,3 +53,8 @@ export const Spacing = styled.div`
     margin: 10px 0;
 `
 
+export const StyledButton = styled(ButtonContainer)<StyledButtonProps>`
+opacity: ${({ isValid }) => (isValid ? 1 : 0.5)};
+pointer-events: ${({ isValid }) => (isValid ? 'auto' : 'none')};
+cursor: pointer;
+`;

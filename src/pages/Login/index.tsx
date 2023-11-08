@@ -1,18 +1,18 @@
-import { useForm } from "react-hook-form";
-import Button from "../../components/Button";
-import Input from "../../components/Input";
 import { yupResolver } from "@hookform/resolvers/yup";
+import { useForm } from "react-hook-form";
 import * as yup from "yup";
+import Input from "../../components/Input";
 
-import { Container, LoginContainer, Column, Spacing, Title } from "./styles";
-import { defaultValues, IFormLogin } from "./types";
+import Button from "../../components/Button";
+import { Column, Container, LoginContainer, Spacing, Title } from "./styles";
+import { IFormLogin, defaultValues } from "./types";
 
 const schema = yup
   .object({
-    email: yup.string().email("E-mail inválido").required("Campo obrigatório"),
+    email: yup.string().matches(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/, "E-mail inválido").required("Campo obrigatório"),
     password: yup
       .string()
-      .min(6, "No minimo 6 caracteres")
+      .matches(/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$/, "No mínimo 6 caracteres, incluindo uma letra e um número")
       .required("Campo obrigatório"),
   })
   .required();
@@ -27,6 +27,10 @@ const Login = () => {
     defaultValues,
     reValidateMode: "onChange",
   });
+
+  const handleLogin = () => {
+    console.log("Função handleLogin chamada!");
+  };
 
   return (
     <Container>
@@ -49,7 +53,7 @@ const Login = () => {
             errorMessage={errors?.password?.message}
           />
           <Spacing />
-          <Button title="Entrar" />
+          <Button title="Entrar" disabled={!isValid} isValid={isValid} onClick={handleLogin} />
         </Column>
       </LoginContainer>
     </Container>
