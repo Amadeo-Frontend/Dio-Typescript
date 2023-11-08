@@ -1,46 +1,50 @@
-# Getting Started with Create React App
+##
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Desafio - Implementando uma tela de Login com validação usando TypeScript
 
-## Available Scripts
+</br>
 
-In the project directory, you can run:
+<div style="display: inline_block" align="center">
+     <img align="center" alt="Amadeo-ReactJs" src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB">
+     <img align="center" alt="Amadeo-JS" src="https://img.shields.io/badge/TypeScript-323330?style=for-the-badge&logo=typescript&logoColor">
+     <img align="center" alt="Amadeo-styled" src="https://img.shields.io/badge/styled-components-1572B6?style=for-the-badge&logo=styled-components&logoColor=white">
+  </div>
+  </br>
 
-### `npm start`
+# Projeto
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Este é um projeto de uma tela de login simples construído com React, styled-components e TypeScript. Ele usa Yup para validação de formulário e react-hook-form para gerenciamento de estado do formulário.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Recursos Principais
 
-### `npm test`
+- Valida o formato de e-mail e senha usando Yup e expressões regulares: Verifica se o e-mail está no formato correto e se a senha tem pelo menos 6 caracteres, incluindo pelo menos uma letra e um número.
+A validação é acionada quando o formulário perde o foco (onBlur) e revalida quando o valor de um campo muda (onChange).
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Desabilita o botão de login até que o formulário seja preenchido corretamente: Isso é determinado pela propriedade isValid do objeto formState retornado pelo hook useForm.
+  
+- Simula uma função de login que registra uma mensagem no console: A função handleLogin é chamada quando o botão de login é clicado. Neste exemplo, ela simplesmente registra uma mensagem no console.
 
-### `npm run build`
+## Tecnologias Utilizadas
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **React JS:** O framework JavaScript utilizado como base para a construção da aplicação.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **Styled-components**: O estilo da aplicação é criado com styled-components para uma experiência visual atraente.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **typescript**: O TypeScript é usado para adicionar tipos estáticos à aplicação. Isso ajuda a prevenir erros em tempo de execução, melhora a legibilidade do código e facilita a refatoração e a manutenção do código.
 
-### `npm run eject`
+## Instalação
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+1. Clone este repositório.
+2. Instale as dependências usando `npm install`.
+3. Execute a aplicação com `npm start`.
+4. Comece a buscar e explorar repositórios do GitHub!
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Apreciamos o seu interesse neste projeto e esperamos que esta aplicação torne sua experiência de busca de repositórios no GitHub mais eficiente e agradável. Se tiver alguma sugestão ou feedback, por favor, compartilhe comigo!
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Live
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+(<https://dio-typescript.vercel.app/>)
 
-## Learn More
+#
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+![Image Generation App](https://github.com/Amadeo-Frontend/images_sites/blob/main/dio-login.png)
