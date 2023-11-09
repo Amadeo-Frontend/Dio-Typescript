@@ -13,7 +13,14 @@
 
 # Projeto
 
-Este é um projeto de uma tela de login simples construído com React, styled-components e TypeScript. Ele usa Yup para validação de formulário e react-hook-form para gerenciamento de estado do formulário.
+
+Este é um projeto que conciste na implementação de um formulário de login em React utilizando TypeScript, Styled Components, Yup e React Hook Form, a tipagem estática oferecida pelo TypeScript é integrada para aprimorar a robustez e segurança do código. Ao definir tipos para os estados e props, garantimos uma manipulação mais confiável dos dados. O React Hook Form é empregado para gerenciar o estado do formulário e automatizar a validação dos campos.
+
+A biblioteca Yup é utilizada para definir esquemas de validação, permitindo uma verificação mais detalhada dos dados inseridos. A validação do formulário é então tratada de forma eficiente através da integração do Yup com o React Hook Form, garantindo que apenas dados válidos sejam enviados.
+
+A estilização é realizada com a biblioteca Styled Components, proporcionando uma abordagem elegante e modular para o design do formulário. Quando o formulário não está validado de acordo com os critérios estabelecidos pelo Yup, o botão de login é automaticamente desativado por meio da manipulação dos estados do React Hook Form.
+
+Essa abordagem integrada entre TypeScript, React Hook Form, Yup e Styled Components não apenas reforça a coesão entre estilo e funcionalidade, mas também oferece uma solução completa para a validação eficiente de formulários, garantindo uma experiência de usuário melhorada e a segurança do processo de login.
 
 ## Recursos Principais
 
